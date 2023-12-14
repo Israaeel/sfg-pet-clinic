@@ -56,11 +56,10 @@
     <developerConnection>scm:git:git@github.com:Israaeel/sfg-pet-clinic.git</developerConnection>
     <tag>HEAD</tag>
   </scm>
-  <distributionManagement>
+  <repositories>
     <repository>
-      <id>0.0.2</id>
-      <url>https://github.com/Israaeel/sfg-pet-clinic</url>
+      <id>forplay-legacy</id>
+      <url>http://forplay.googlecode.com/svn/mavenrepo</url>
     </repository>
-  </distributionManagement>
-
+  </repositories>
 </project>
