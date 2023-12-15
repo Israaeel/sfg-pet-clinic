@@ -54,6 +54,7 @@
 		</plugins>
 	</build>
   <scm>
+    <connection>scm:git:https://github.com/Israaeel/git@github.com:Israaeel/sfg-pet-clinic.git</connection>
     <developerConnection>scm:git:git@github.com:Israaeel/sfg-pet-clinic.git</developerConnection>
     <tag>HEAD</tag>
   </scm>
