@@ -24,6 +24,7 @@
       <jaxb.version>2.3.0</jaxb.version>
       <maven.compiler.source>${java.version}</maven.compiler.source>
       <maven.compiler.target>${java.version}</maven.compiler.target>
+      <maven.compiler.release>17</maven.compiler.release>
 	</properties>
 
 	<dependencies>
@@ -43,26 +44,17 @@
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-release-plugin</artifactId>
-            <configuration>
-              <goals>install</goals>
-              <autoVersionSubmodules>true</autoVersionSubmodules>
-            </configuration>
           </plugin>
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-surefire-plugin</artifactId>
             <version>2.19.1</version>
-            <configuration>
-              <argLine>
-                --illegal-access=permit
-              </argLine>
-            </configuration>
           </plugin>
 		</plugins>
 	</build>
 
   <scm>
-    <connection>scm:git:https://github.com/Israaeel/git@github.com:Israaeel/sfg-pet-clinic.git</connection>
+    <connection>scm:git:https://github.com/Israaeel/sfg-pet-clinic.git</connection>
     <developerConnection>scm:git:git@github.com:Israaeel/sfg-pet-clinic.git</developerConnection>
     <url>https://github.com/Israaeel/sfg-pet-clinic</url>
     <tag>HEAD</tag>

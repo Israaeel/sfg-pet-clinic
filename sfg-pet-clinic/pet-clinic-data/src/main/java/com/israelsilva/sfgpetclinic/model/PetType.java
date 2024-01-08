@@ -1,4 +1,4 @@
-package model;
+package com.israelsilva.sfgpetclinic.model;
 
 public class PetType {
 
