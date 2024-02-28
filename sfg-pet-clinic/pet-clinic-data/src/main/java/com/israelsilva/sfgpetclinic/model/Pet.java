@@ -4,6 +4,7 @@ import java.time.LocalDate;
 
 public class Pet {
 
+	private Long id;
 	private PetType petType;
 	private Owner owner;
 	private LocalDate birthDate;
@@ -30,5 +31,14 @@ public class Pet {
 
 	public void setBirthDate(LocalDate birthDate) {
 		this.birthDate = birthDate;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	// Método para capturar o ID
+	public Long getId() {
+		return this.id;
 	}
 }
