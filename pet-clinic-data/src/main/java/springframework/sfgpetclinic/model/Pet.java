@@ -1,4 +1,4 @@
-package israel.springframework.sfgpetclinic.model;
+package springframework.sfgpetclinic.model;
 
 import java.time.LocalDate;
 
