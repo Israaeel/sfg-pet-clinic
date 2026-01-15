@@ -1,9 +1,11 @@
-package springframework.sfgpetclinic.services;
+package springframework.sfgpetclinic.services.map;
 
 import org.springframework.stereotype.Service;
 import springframework.sfgpetclinic.model.Owner;
+import springframework.sfgpetclinic.services.AbstractMapService;
+import springframework.sfgpetclinic.services.OwnerService;
+
 import java.util.Set;
-import java.util.HashSet;
 
 @Service
 public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements OwnerService {
@@ -19,8 +21,24 @@ public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements 
     }
 
     @Override
-    public Owner save(Owner owner) {
+    public Owner save(Owner object) {
+        return super.save(object.getId(), object);
+    }
 
-        return super.save(owner.getId(), owner);
+
+    @Override
+    public void delete(Owner object) {
+        super.delete(object);
+    }
+
+    @Override
+    public void deleteById(Long id) {
+        super.deleteById(id);
+    }
+
+    @Override
+    public Owner findByLastName(String lastName) {
+
+        return null;
     }
 }
