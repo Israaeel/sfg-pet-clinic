@@ -1,34 +1,31 @@
 package springframework.sfgpetclinic.model;
 
+import jakarta.persistence.*; // Garanta que é o jakarta
+import lombok.*;
 import java.time.LocalDate;
+import java.util.HashSet;
+import java.util.Set;
 
-public class Pet {
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Entity // <--- ESTA É A ANOTAÇÃO QUE O ERRO RECLAMA QUE FALTA
+@Table(name = "pets")
+public class Pet extends BaseEntity {
 
+    @Column(name = "name")
+    private String name;
+
+    @ManyToOne
+    @JoinColumn(name = "type_id")
     private PetType petType;
+
+    @ManyToOne
+    @JoinColumn(name = "owner_id")
     private Owner owner;
+
+    @Column(name = "birth_date")
     private LocalDate birthDate;
 
-    public PetType getPetType() {
-        return petType;
-    }
-
-    public void setPetType(PetType petType) {
-        this.petType = petType;
-    }
-
-    public Owner getOwner() {
-        return owner;
-    }
-
-    public void setOwner(Owner owner) {
-        this.owner = owner;
-    }
-
-    public LocalDate getBirthDate() {
-        return birthDate;
-    }
-
-    public void setBirthDate(LocalDate birthDate) {
-        this.birthDate = birthDate;
-    }
 }

@@ -1,23 +1,26 @@
 package springframework.sfgpetclinic.model;
 
-public class Person {
+import jakarta.persistence.Column;
+import jakarta.persistence.MappedSuperclass;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
-    private String FirstName;
-    private String LastName;
+@Getter
+@Setter
+@NoArgsConstructor // Essencial: cria o construtor sem argumentos
+@MappedSuperclass
+public class Person extends BaseEntity {
 
-    public String getFirstName() {
-        return FirstName;
+    public Person(Long id, String firstName, String lastName) {
+        super(id); // Chama o AllArgsConstructor da BaseEntity
+        this.firstName = firstName;
+        this.lastName = lastName;
     }
 
-    public void setFirstName(String firstName) {
-        FirstName = firstName;
-    }
+    @Column(name = "first_name")
+    private String firstName;
 
-    public String getLastName() {
-        return LastName;
-    }
-
-    public void setLastName(String lastName) {
-        LastName = lastName;
-    }
+    @Column(name = "last_name")
+    private String lastName;
 }
