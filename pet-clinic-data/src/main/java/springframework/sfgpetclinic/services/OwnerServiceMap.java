@@ -6,20 +6,21 @@ import java.util.Set;
 import java.util.HashSet;
 
 @Service
-public class OwnerServiceMap implements OwnerService {
+public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements OwnerService {
 
     @Override
     public Set<Owner> findAll() {
-        return new HashSet<>();
-    }
-
-    @Override
-    public Owner save(Owner owner) {
-        return owner;
+        return super.findAll();
     }
 
     @Override
     public Owner findById(Long id) {
-        return null;
+        return super.findById(id);
+    }
+
+    @Override
+    public Owner save(Owner owner) {
+
+        return super.save(owner.getId(), owner);
     }
 }
