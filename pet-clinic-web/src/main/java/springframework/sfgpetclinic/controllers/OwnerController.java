@@ -1,8 +1,10 @@
-package services;
+package springframework.sfgpetclinic.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import springframework.sfgpetclinic.services.OwnerService;
+
 
 @RequestMapping("/owners")
 @Controller

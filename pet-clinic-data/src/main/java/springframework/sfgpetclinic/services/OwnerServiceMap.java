@@ -1,4 +1,4 @@
-package services;
+package springframework.sfgpetclinic.services;
 
 import org.springframework.stereotype.Service;
 import springframework.sfgpetclinic.model.Owner;
